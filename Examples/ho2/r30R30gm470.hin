@@ -1,0 +1,12 @@
+10 T 90 300
+0 0 0 T 10.0
+input/h0_J10.dat
+input/h0gm_J10.dat
+14578.471659 2.51 30
+input/ho2lr.dat
+1781.041591 2.46 30
+input/ho2Br.dat
+500 1 T
+input/hre.dat
+../../data/ho2/ho2_vlr.dat
+../../data/ho2/ho2_vBR.dat

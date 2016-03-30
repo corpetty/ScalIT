@@ -1,0 +1,191 @@
+ **********************************************
+      EigValues  of  Molecules  Using PIST     
+ **********************************************
+ 
+  Get Input parameters from STDIO
+   Loading Initial Data .......
+   Loading H0 data from:input/h0_24.dat                                                                                                                 
+   Loading Out-most Layer data from:input/h0gm_24.dat                                                                                                               
+  No absorption potential is needed for the calculation!
+   Call ProgDiag subroutine ........
+ ccccccccccccccccccccccccccccccccccccccccccccccccc
+ c        Diagonalization of HOSB                c
+ ccccccccccccccccccccccccccccccccccccccccccccccccc
+   Diagonalizing HOSB ......
+ 
+ ----------------------------------------------------------------------
+  BJ Diag. Level:    3.   Grid Size:    470   # of Blocks:     1
+  Dimension Size:   75.   Coord. Dep:   F
+ 
+ ----------------------------------------------------------------------
+  BJ Diag. Level:    2.   Grid Size:     30   # of Blocks:    40
+  Dimension Size:   30.   Coord. Dep:   F
+ 
+ ----------------------------------------------------------------------
+  BJ Diag. Level:    1.   Grid Size:     30   # of Blocks:  1175
+  Dimension Size:    1.   Coord. Dep:   F
+ 
+     ---------------------------------------------------------------------
+       MPI WTime for HOSB Diagonization(sec):   375.730129003525     
+     ---------------------------------------------------------------------
+ 
+ =============    End of Diagonalization =========
+ 
+ cccccccccccccccccccccccccccccccccccccccccccccccc
+ c       Save HOSB, VOSB, EIGVal Results        c
+ cccccccccccccccccccccccccccccccccccccccccccccccc
+   Intemediate Data(HOSB, VOSB, Eig0) are saved in Binary file
+  HOSB is not stored!
+  VOSB/Eig0 are not stored!
+ 
+ ========  Finish HOSB/VOSB/EIGVAL  Saving  =======
+ 
+   call progPIST! Get eigenvalues via PIST ..........
+ 
+ ================================================
+      Get  Eigen Values Using PIST method        
+ ================================================
+ 
+  ===== Preconditioner Information ====
+  Central Energy: -7.400000000000000E-002
+ 
+  Using OSB preconditioner.
+ 
+  ===== End of  Preconditioner Information ====
+ 
+  ------  Bound states for Real Version of H0  -------
+ 
+     ---------------------------------------------------------------------
+       MPI Time for PIST:   4.940032958984375E-004
+     ---------------------------------------------------------------------
+ 
+ # of Lanczos iter.:           1 . # of iter. for Linear Solver:          16
+ # of Lanczos iter.:           2 . # of iter. for Linear Solver:          42
+ # of Lanczos iter.:           3 . # of iter. for Linear Solver:          34
+ # of Lanczos iter.:           4 . # of iter. for Linear Solver:          41
+ # of Lanczos iter.:           5 . # of iter. for Linear Solver:          39
+ # of Lanczos iter.:           6 . # of iter. for Linear Solver:          40
+ # of Lanczos iter.:           7 . # of iter. for Linear Solver:          37
+ # of Lanczos iter.:           8 . # of iter. for Linear Solver:          36
+ # of Lanczos iter.:           9 . # of iter. for Linear Solver:          33
+ # of Lanczos iter.:          10 . # of iter. for Linear Solver:          31
+ # of Lanczos iter.:          11 . # of iter. for Linear Solver:          27
+ # of Lanczos iter.:          12 . # of iter. for Linear Solver:          29
+ # of Lanczos iter.:          13 . # of iter. for Linear Solver:          21
+ # of Lanczos iter.:          14 . # of iter. for Linear Solver:          27
+ # of Lanczos iter.:          15 . # of iter. for Linear Solver:          28
+ # of Lanczos iter.:          16 . # of iter. for Linear Solver:          27
+ # of Lanczos iter.:          17 . # of iter. for Linear Solver:          28
+ # of Lanczos iter.:          18 . # of iter. for Linear Solver:          27
+ # of Lanczos iter.:          19 . # of iter. for Linear Solver:          25
+ # of Lanczos iter.:          20 . # of iter. for Linear Solver:          23
+ # of Lanczos iter.:          21 . # of iter. for Linear Solver:          26
+ # of Lanczos iter.:          22 . # of iter. for Linear Solver:          27
+ # of Lanczos iter.:          23 . # of iter. for Linear Solver:          25
+ # of Lanczos iter.:          24 . # of iter. for Linear Solver:          25
+ # of Lanczos iter.:          25 . # of iter. for Linear Solver:          22
+ # of Lanczos iter.:          26 . # of iter. for Linear Solver:          23
+ # of Lanczos iter.:          27 . # of iter. for Linear Solver:          23
+ # of Lanczos iter.:          28 . # of iter. for Linear Solver:          23
+ # of Lanczos iter.:          29 . # of iter. for Linear Solver:          24
+ # of Lanczos iter.:          30 . # of iter. for Linear Solver:          22
+ # of Lanczos iter.:          31 . # of iter. for Linear Solver:          26
+ # of Lanczos iter.:          32 . # of iter. for Linear Solver:          24
+ # of Lanczos iter.:          33 . # of iter. for Linear Solver:          21
+ # of Lanczos iter.:          34 . # of iter. for Linear Solver:          21
+ # of Lanczos iter.:          35 . # of iter. for Linear Solver:          21
+ # of Lanczos iter.:          36 . # of iter. for Linear Solver:          21
+ # of Lanczos iter.:          37 . # of iter. for Linear Solver:          22
+ # of Lanczos iter.:          38 . # of iter. for Linear Solver:          19
+ # of Lanczos iter.:          39 . # of iter. for Linear Solver:          21
+ # of Lanczos iter.:          40 . # of iter. for Linear Solver:          23
+ # of Lanczos iter.:          41 . # of iter. for Linear Solver:          24
+ # of Lanczos iter.:          42 . # of iter. for Linear Solver:          24
+ # of Lanczos iter.:          43 . # of iter. for Linear Solver:          24
+ # of Lanczos iter.:          44 . # of iter. for Linear Solver:          23
+ # of Lanczos iter.:          45 . # of iter. for Linear Solver:          23
+ # of Lanczos iter.:          46 . # of iter. for Linear Solver:          25
+ # of Lanczos iter.:          47 . # of iter. for Linear Solver:          24
+ # of Lanczos iter.:          48 . # of iter. for Linear Solver:          22
+ # of Lanczos iter.:          49 . # of iter. for Linear Solver:          21
+ CNT=          50  RES=  5.016705375668638E-003
+ # of Lanczos iter.:          50 . # of iter. for Linear Solver:          21
+ # of Lanczos iter.:          51 . # of iter. for Linear Solver:          18
+ # of Lanczos iter.:          52 . # of iter. for Linear Solver:          21
+ # of Lanczos iter.:          53 . # of iter. for Linear Solver:          22
+ # of Lanczos iter.:          54 . # of iter. for Linear Solver:          22
+ # of Lanczos iter.:          55 . # of iter. for Linear Solver:          17
+ # of Lanczos iter.:          56 . # of iter. for Linear Solver:          19
+ # of Lanczos iter.:          57 . # of iter. for Linear Solver:          19
+ # of Lanczos iter.:          58 . # of iter. for Linear Solver:          18
+ # of Lanczos iter.:          59 . # of iter. for Linear Solver:          16
+ CNT=          60  RES=  8.447481295370610E-004
+ # of Lanczos iter.:          60 . # of iter. for Linear Solver:          17
+ # of Lanczos iter.:          61 . # of iter. for Linear Solver:          19
+ # of Lanczos iter.:          62 . # of iter. for Linear Solver:          19
+ # of Lanczos iter.:          63 . # of iter. for Linear Solver:          18
+ # of Lanczos iter.:          64 . # of iter. for Linear Solver:          18
+ # of Lanczos iter.:          65 . # of iter. for Linear Solver:          20
+ # of Lanczos iter.:          66 . # of iter. for Linear Solver:          18
+ # of Lanczos iter.:          67 . # of iter. for Linear Solver:          18
+ # of Lanczos iter.:          68 . # of iter. for Linear Solver:          18
+ # of Lanczos iter.:          69 . # of iter. for Linear Solver:          17
+ CNT=          70  RES=  4.832529279265446E-004
+ # of Lanczos iter.:          70 . # of iter. for Linear Solver:          15
+ # of Lanczos iter.:          71 . # of iter. for Linear Solver:          17
+ # of Lanczos iter.:          72 . # of iter. for Linear Solver:          17
+ # of Lanczos iter.:          73 . # of iter. for Linear Solver:          15
+ # of Lanczos iter.:          74 . # of iter. for Linear Solver:          18
+ # of Lanczos iter.:          75 . # of iter. for Linear Solver:          18
+ # of Lanczos iter.:          76 . # of iter. for Linear Solver:          17
+ # of Lanczos iter.:          77 . # of iter. for Linear Solver:          18
+ # of Lanczos iter.:          78 . # of iter. for Linear Solver:          18
+ # of Lanczos iter.:          79 . # of iter. for Linear Solver:          15
+ CNT=          80  RES=  2.863148209186761E-005
+ # of Lanczos iter.:          80 . # of iter. for Linear Solver:          19
+ # of Lanczos iter.:          81 . # of iter. for Linear Solver:          18
+ # of Lanczos iter.:          82 . # of iter. for Linear Solver:          14
+ # of Lanczos iter.:          83 . # of iter. for Linear Solver:          17
+ # of Lanczos iter.:          84 . # of iter. for Linear Solver:          17
+ # of Lanczos iter.:          85 . # of iter. for Linear Solver:          17
+ # of Lanczos iter.:          86 . # of iter. for Linear Solver:          18
+ # of Lanczos iter.:          87 . # of iter. for Linear Solver:          18
+ # of Lanczos iter.:          88 . # of iter. for Linear Solver:          18
+ # of Lanczos iter.:          89 . # of iter. for Linear Solver:          16
+ CNT=          90  RES=  1.326354473280000E-006
+ # of Lanczos iter.:          90 . # of iter. for Linear Solver:          17
+ # of Lanczos iter.:          91 . # of iter. for Linear Solver:          18
+ # of Lanczos iter.:          92 . # of iter. for Linear Solver:          17
+ # of Lanczos iter.:          93 . # of iter. for Linear Solver:          18
+ # of Lanczos iter.:          94 . # of iter. for Linear Solver:          19
+ # of Lanczos iter.:          95 . # of iter. for Linear Solver:          18
+ # of Lanczos iter.:          96 . # of iter. for Linear Solver:          17
+ # of Lanczos iter.:          97 . # of iter. for Linear Solver:          18
+ # of Lanczos iter.:          98 . # of iter. for Linear Solver:          18
+ # of Lanczos iter.:          99 . # of iter. for Linear Solver:          17
+ CNT=         100  RES=  1.987871117714590E-010
+ 
+     ---------------------------------------------------------------------
+       MPI Time for Diagonalization:    478.174449920654     
+     ---------------------------------------------------------------------
+ 
+ 
+ Max Lanczos Error  1.987871117714590E-010  Eigen Values:
+ -7.353384261232157E-002 -7.345321609649923E-002 -7.318070487388409E-002
+ -7.274106267489340E-002 -7.212663777752187E-002 -7.133900470818443E-002
+ -7.037988553074519E-002 -6.925132630626005E-002 -6.869120545667241E-002
+ -6.861161531386573E-002 -6.834239478823256E-002 -6.795567504167865E-002
+ -6.790812955485126E-002 -6.762398021591637E-002 -6.754062723957681E-002
+ -6.730118131393026E-002 -6.725669786053570E-002 -6.679972139604280E-002
+ -6.652308561188741E-002 -6.649555803981952E-002 -6.616126243909889E-002
+ -6.557555211342701E-002 -6.534316887657710E-002 -6.487385605119701E-002
+ -6.446083502736714E-002 -6.434722832209117E-002 -6.402970640280081E-002
+ -6.395106923410662E-002 -6.368511997623962E-002 -6.325607999549095E-002
+ 
+    ---------------------------------------------------------------------
+      Timing for PIST and Lanczos Diagonalization (MPI_WTime):
+            478.175073862076      seconds
+    ---------------------------------------------------------------------
+ 
+ =======================    End of program   =========================
+ 

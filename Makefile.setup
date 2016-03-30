@@ -1,0 +1,37 @@
+# Setup for making ScalIT
+
+# Insert paths to blas and lapack if static
+STATIC_LAPACK := /usr/lib/liblapack.a
+STATIC_BLAS := /usr/lib/libblas.a
+
+# program locations
+# Note that FC is almost vestigal, as the mpi wrappers are generally used for all
+#FC := gfortran 
+FC := gfortran
+#MPIFC := /lustre/work/apps/mvapich2-1.9b/bin/mpif90
+MPIFC := mpif90
+AR := ar
+
+# static (a) or shared (so) library production
+LIBTYPE := a
+
+FFLAGS := -g $(foreach inc,$(INCPATH),-I $(inc))
+ifeq ($(FC),gfortran)
+    FFLAGS += -J $(MODPATH) # how to add equivalent of "-heap-arrays"?
+else
+    FFLAGS += -heap-arrays -extend-source -module $(MODPATH)
+endif
+ifeq ($(LIBTYPE),so)
+    FFLAGS += -fpic -shared
+endif
+
+LDFLAGS :=
+ifeq ($(FC),gfortran)
+    ifeq ($(LIBTYPE),a)
+        LDFLAGS += $(STATIC_LAPACK) $(STATIC_BLAS)
+    else
+        LDFLAGS += -llapack -lblas
+    endif
+else
+    LDFLAGS += -mkl
+endif
