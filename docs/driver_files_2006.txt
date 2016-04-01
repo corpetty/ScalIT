@@ -20,33 +20,33 @@ NOTE:  anything that is included in the old version of ScalIT not in the current
 ---  ./dosb/dvr/mm.drv.f90
 ---  ./dosb/dvr/sinc1.drv.f90
 ---  ./dosb/dvr/sinc2.drv.f90
-./dosb/func/powell.drv.f90
-./dosb/func/simple.drv.f90
-./dosb/func/simplex.drv.f90
-./dosb/func/simplex.drv2.f90
-./dosb/func/simplex1.drv.f90
-./dosb/index/cf.drv.f90
-./dosb/index/cg.drv.f90
-./dosb/index/cg0.drv.f90
-./dosb/index/gaunt.drv.f90
-./dosb/index/getm3.drv.f90
-./dosb/index/jm1.drv.f90
-./dosb/index/jm2.drv.f90
-./dosb/index/m1d.drv.f90
-./dosb/index/m3a.drv.f90
-./dosb/index/m4a.drv.f90
-./dosb/index/m4ak.drv.f90
-./dosb/index/nlm.drv.f90
-./dosb/index/node.drv.f90
-./dosb/index/nodeLen.drv.f90
-./dosb/index/pjm.drv.f90
-./dosb/index/threej0.drv.f90
-./dosb/integral/gauAssLagu.drv.f90
-./dosb/integral/gauChev.drv.f90
-./dosb/integral/gauHerm.drv.f90
-./dosb/integral/gauJacb.drv.f90
-./dosb/integral/gauLagu.drv.f90
-./dosb/integral/gauLege.drv.f90
+---  ./dosb/func/powell.drv.f90
+---  ./dosb/func/simple.drv.f90
+---  ./dosb/func/simplex.drv.f90
+---  ./dosb/func/simplex.drv2.f90
+---  ./dosb/func/simplex1.drv.f90
+---  ./dosb/index/cf.drv.f90
+---  ./dosb/index/cg.drv.f90
+---  ./dosb/index/cg0.drv.f90
+---  ./dosb/index/gaunt.drv.f90
+---  ./dosb/index/getm3.drv.f90
+---  ./dosb/index/jm1.drv.f90
+---  ./dosb/index/jm2.drv.f90
+---  ./dosb/index/m1d.drv.f90
+---  ./dosb/index/m3a.drv.f90
+---  ./dosb/index/m4a.drv.f90
+---  ./dosb/index/m4ak.drv.f90
+---  ./dosb/index/nlm.drv.f90
+---  ./dosb/index/node.drv.f90
+---  ./dosb/index/nodeLen.drv.f90
+---  ./dosb/index/pjm.drv.f90
+---  ./dosb/index/threej0.drv.f90
+---  ./dosb/integral/gauAssLagu.drv.f90
+---  ./dosb/integral/gauChev.drv.f90
+---  ./dosb/integral/gauHerm.drv.f90
+---  ./dosb/integral/gauJacb.drv.f90
+---  ./dosb/integral/gauLagu.drv.f90
+---  ./dosb/integral/gauLege.drv.f90
 ./dosb/ndpr/fmk.drv.f90
 ./dosb/ndpr/fmkInt.drv.f90
 ./dosb/ndpr/ndp_BR.drv.f90
