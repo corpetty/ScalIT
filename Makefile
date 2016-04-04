@@ -79,7 +79,9 @@ ham_lib: presinc_module $(LIBPATH)/libham.$(LIBTYPE)
 PRESINC_OBJS := $(patsubst %.f90,%.o,$(wildcard $(SRCPATH)/ham/presinc/*.f90))
 presinc_module: $(PRESINC_OBJS)
 
-LIBHAM_OBJS := $(patsubst %.f90,%.o,$(shell find $(SRCPATH)/ham/libham -name "*.f90"))
+LIBHAM_OBJS := $(SRCPATH)/ham/libham/coeff/threejmod.o \
+               $(SRCPATH)/ham/libham/coeff/threej.o \
+               $(patsubst %.f90,%.o,$(shell find $(SRCPATH)/ham/libham -name "*.f90"))
 $(LIBPATH)/libham.$(LIBTYPE): $(PRESINC_OBJS) $(LIBHAM_OBJS)
 	if [ $(LIBTYPE) = a ]; then $(AR) -rcus $@ $^ ; else $(FC) -o $(LDFLAGS) $^ ; fi
 	

@@ -1,8 +1,8 @@
 # Setup for making ScalIT
 
 # Insert paths to blas and lapack if static
-STATIC_LAPACK := /usr/lib/liblapack.a
-STATIC_BLAS := /usr/lib/libblas.a
+STATIC_LAPACK := /usr/local/lib/liblapack.a
+STATIC_BLAS := /usr/local/lib/libblas.a
 
 # program locations
 # Note that FC is almost vestigal, as the mpi wrappers are generally used for all
