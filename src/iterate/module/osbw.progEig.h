@@ -93,6 +93,7 @@ subroutine progPistEig()
     
  1000 format (E25.15,2x,E25.15,2x,E25.15)
  1001 format (E25.15,2x,E25.15)
+ 1002 format (E16.10E2)
  
 end subroutine
 !ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
