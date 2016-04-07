@@ -2,7 +2,7 @@
 ! Testing subroutine for vector_mpi functions
 !
 program vecmpi
-   include "../comm/mpidir.h"
+   include "mpif.h"
    integer, parameter :: N1 = 50
    integer, parameter :: N2 = 10
    double precision, dimension(N1, N2) :: locData

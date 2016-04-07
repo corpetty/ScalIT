@@ -6,7 +6,7 @@
 
 program test_NodeLen
 
-  include '../comm/mpidir.h'
+  include 'mpif.h'
   integer(kind=MPI_OFFSET_KIND) :: gLen, gStart
   integer :: node, i, pLen
 

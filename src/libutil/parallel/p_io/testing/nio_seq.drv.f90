@@ -1,11 +1,11 @@
-program test_NDiag
+program test_NSeq
 
    implicit none
-   include "../comm/mpidir.h"
+   include "mpif.h"
    integer, parameter :: FILELEN=128
    character(LEN=FILELEN)  :: fileName 
-   integer :: NIN, NOUT
-   double precision,allocatable :: buf1(:,:),buf2(:,:)
+   integer :: NIN
+   double precision,allocatable :: buf1(:),buf2(:)
    integer, parameter :: rootID=0
    integer :: ierr, id, nproc, gSize
    integer(KIND=MPI_OFFSET_KIND) :: pos
@@ -15,30 +15,27 @@ program test_NDiag
   
    call MPI_COMM_Rank(MPI_COMM_WORLD, id, ierr)
    call MPI_Comm_Size(MPI_COMM_WORLD, nproc, ierr)
-   
+
    if (id==rootID) then
       read(*,'(A)') filename
-      read(*,*) NIN, NOUT
+      read(*,*) NIN
       print *, ' Initialize MPI: Open file:', filename
    end if
 
    call MPI_BCAST(filename,FILELEN,MPI_CHARACTER,rootID,MPI_COMM_WORLD,ierr)
    call MPI_BCAST(NIN,1,MPI_INTEGER,rootID,MPI_COMM_WORLD,ierr)
-   call MPI_BCAST(NOUT,1,MPI_INTEGER,rootID,MPI_COMM_WORLD,ierr)
 
-   allocate(buf1(NIN,NOUT),buf2(NIN,NOUT))
+   allocate(buf1(NIN),buf2(NIN))
 
-   do i = 1, NOUT
-      do j = 1, NIN
-         buf1(j,i)=(id*1000+j*100+i)
-      end do
+   do j = 1, NIN
+      buf1(j)=(id*1000+j)
    end do
 
    pos = id * NIN + 1; gSize=nproc*NIN
 
-   call NSaveDataDiag(MPI_COMM_WORLD,filename,pos,gSize,NIN,NOUT,buf1,ierr)
+   call NSaveDataSeq(MPI_COMM_WORLD,filename,pos,NIN,buf1,ierr)
 
-   call NLoadDataDiag(MPI_COMM_WORLD,filename,pos,gSize,NIN,NOUT,buf2,ierr)
+   call NLoadDataSeq(MPI_COMM_WORLD,filename,pos,NIN,buf2,ierr)
 
    print *, ' Data differenceat node=',id,':',  buf2-buf1
 

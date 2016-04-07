@@ -4,6 +4,7 @@
 program test_mindex
    use mosbtype
    implicit none
+   include 'mpif.h'
 
    integer :: nNodes, sF, sN(FMAX)
    integer  :: i, j

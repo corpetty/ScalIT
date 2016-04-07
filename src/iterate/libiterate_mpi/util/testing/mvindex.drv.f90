@@ -5,7 +5,7 @@ program test_mindex
    use mosbtype
    implicit none
 
-!   include 'mpif.h'
+   include 'mpif.h'
    integer :: nNodes, sF, sN(FMAX)
    integer  :: i, j
    integer(kind=MPI_OFFSET_KIND) :: pos, pos1

@@ -1,10 +1,10 @@
 !
-! Subroutine to test GS-Orthogonalization in MPI, Complex version
+! Subroutine to test GS-Orthogonalization in MPI, Complex Version
 !
 
-program testGS_SX_MPI
+program testGS_MPI_CX
      IMPLICIT NONE
-     include '../../comm/mpidir.h'
+     include 'mpif.h'
      integer, parameter :: N1 = 100   ! # of row
      integer, parameter :: N2 = 50    ! # of column
      DOUBLE PRECISION, PARAMETER :: EPSI = 1.0D-14
@@ -12,7 +12,7 @@ program testGS_SX_MPI
      double complex, dimension (N1, N2) :: A
      double complex, dimension (N2, N2) :: B
      double precision :: maxErr, MAXMATI_CX    
-     logical :: isOrth_SX_MPI
+     logical :: isOrth_CX_MPI
      integer :: myid, ierr, node
      double precision :: mt0, mt1, mt2, ct0, ct1, ct2
 
@@ -28,22 +28,22 @@ program testGS_SX_MPI
      IF (myid == 0) THEN
         print *
         print *, '************************************'
-        print *, '     Testing Complex Version of GS'
+        print *, '     Testing Real Version of GS'
         print *, 'Initial Matrix:', N1*NODE, 'x', N2
    !     print *, A
      END IF
 
-     call randMat_cx(N1, N2, A)     
+     call randMat_CX(N1, N2, A)
      mt1 = MPI_WTime()
      CALL CPU_Time(ct1)
-     CALL GS_FULL_ORTH_SX_MPI(N1, N2, A, IERR)
+     CALL GS_FULL_ORTH_CX_MPI(N1, N2, A, IERR)
      mt2 = MPI_WTime()
      CALL CPU_Time(ct2)
 !     print *, 'Matrix after GS ReOrthogonalization:'
 !     print *, A
 
 
-     if (isOrth_SX_MPI(N1, N2, A, EPSI)) THEN
+     if (isOrth_CX_MPI(N1, N2, A, EPSI)) THEN
         IF (myid == 0) THEN
             print *, 'A is orthogonal after GS'
         END IF
@@ -60,9 +60,9 @@ program testGS_SX_MPI
           print *, '  Time for Gram Schmidt Orth '
           print *, ' CPU Time:', ct2-ct1, '    MPI WTime:', mt2-mt1
      END IF
-
 !****************************************
-     call randMat_CX(N1, N2, A)
+
+     call randMat_CX(A)
      IF (myid == 0) THEN
          print *
          print *, '      Testing Complex version of MGS'
@@ -72,13 +72,13 @@ program testGS_SX_MPI
 
      mt1 = MPI_WTime()
      CALL CPU_Time(ct1)
-     CALL MGS_FULL_ORTH_SX_MPI(N1, N2, A, IERR)
+     CALL MGS_FULL_ORTH_CX_MPI(N1, N2, A, IERR)
      mt2 = MPI_WTime()
      CALL CPU_Time(ct2)
 !     print *, 'Matrix after MGS ReOrthogonalization:'
 !     print *, A
      
-     if (isOrth_SX_MPI(N1, N2, A, EPSI)) THEN
+     if (isOrth_CX_MPI(N1, N2, A, EPSI)) THEN
         IF (myid == 0) THEN
            print *, 'A is orthogonal after MGS'
          END IF

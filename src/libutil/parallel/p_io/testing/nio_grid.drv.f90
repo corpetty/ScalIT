@@ -1,7 +1,7 @@
 program test_NGrid
 
    implicit none
-   include "../comm/mpidir.h"
+   include "mpif.h"
    integer, parameter :: FILELEN=128
    character(LEN=FILELEN) :: fileName 
    integer :: NIN, NOUT
