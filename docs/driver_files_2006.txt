@@ -26,7 +26,7 @@ NOTE:  anything that is included in the old version of ScalIT not in the current
 ---  ./dosb/func/simplex.drv2.f90
 ---  ./dosb/func/simplex1.drv.f90
 ---  ./dosb/index/cf.drv.f90
-XXXXX  ./dosb/index/cg.drv.f90 ----> Seems the file is corrupted.  Need to check other "OSB" ScalIT.
+---  ./dosb/index/cg.drv.f90 
 ---  ./dosb/index/cg0.drv.f90
 ---  ./dosb/index/gaunt.drv.f90
 ---  ./dosb/index/getm3.drv.f90
@@ -117,35 +117,35 @@ XXXXX  ./dosb/index/cg.drv.f90 ----> Seems the file is corrupted.  Need to check
 ---  ./mosb/prog/mtest.drv.f90
 ---  ./mosb/prog/posb.drv.f90
 ---  ./mosb/prog/ptest.drv.f90
-./mosb/qmr/qmr_mpi.drv.f90
-./mosb/qmr/qmrcx_mpi.drv.f90
-./mosb/util/gars.drv.f90
-./mosb/util/getga.drv.f90
-./mosb/util/getindex.drv.f90
-./mosb/util/getmind.drv.f90
-./mosb/util/getpos.drv.f90
-./mosb/util/getsdrv.drv.f90
-./mosb/util/getsimpos.drv.f90
-./mosb/util/getssimpos.drv.f90
-./mosb/util/initga.drv.f90
-./mosb/util/mvindex.drv.f90
-./mosb/util/mvxindex.drv.f90
-./mosb/util/seqdata.drv.f90
-./mosb/util/vindex.drv.f90
-./obase/mm.drv.f90
-./obase/util.drv.f90
-./obase/util_cx.drv.f90
-./osb/lanczos/lan.drv.f90
-./osb/lanczos/lan_dx.drv.f90
-./osb/orth/gsorth.drv.f90
-./osb/orth/gsorth_cx.drv.f90
-./osb/orth/gsorth_sx.drv.f90
-./osb/pist/pist.drv.f90
-./osb/pist/pist_cx.drv.f90
-./osb/pist/pist_dx.drv.f90
-./osb/prog/osb.drv.f90
-./osb/qmr/qmr.drv.f90
-./osb/qmr/qmrcx.drv.f90
+---  ./mosb/qmr/qmr_mpi.drv.f90
+---  ./mosb/qmr/qmrcx_mpi.drv.f90
+---  ./mosb/util/gars.drv.f90
+---  ./mosb/util/getga.drv.f90
+---  ./mosb/util/getindex.drv.f90
+---  ./mosb/util/getmind.drv.f90
+---  ./mosb/util/getpos.drv.f90
+---  ./mosb/util/getsdrv.drv.f90
+---  ./mosb/util/getsimpos.drv.f90
+---  ./mosb/util/getssimpos.drv.f90
+---  ./mosb/util/initga.drv.f90
+---  ./mosb/util/mvindex.drv.f90
+---  ./mosb/util/mvxindex.drv.f90
+---  ./mosb/util/seqdata.drv.f90
+---  ./mosb/util/vindex.drv.f90
+---  ./obase/mm.drv.f90
+---  ./obase/util.drv.f90
+---  ./obase/util_cx.drv.f90
+---  ./osb/lanczos/lan.drv.f90
+---  ./osb/lanczos/lan_dx.drv.f90
+---  ./osb/orth/gsorth.drv.f90
+---  ./osb/orth/gsorth_cx.drv.f90
+---  ./osb/orth/gsorth_sx.drv.f90
+---  ./osb/pist/pist.drv.f90
+---  ./osb/pist/pist_cx.drv.f90
+---  ./osb/pist/pist_dx.drv.f90
+---  ./osb/prog/osb.drv.f90
+---  ./osb/qmr/qmr.drv.f90
+---  ./osb/qmr/qmrcx.drv.f90
 ./pes/acetyl/fitv.drv.f90
 ./pes/ap/ap.drv1.f90
 ./pes/ap/ap.drv2.f90
