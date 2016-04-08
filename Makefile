@@ -81,6 +81,7 @@ presinc_module: $(PRESINC_OBJS)
 
 LIBHAM_OBJS := $(SRCPATH)/ham/libham/coeff/threejmod.o \
                $(SRCPATH)/ham/libham/coeff/threej.o \
+               $(SRCPATH)/ham/libham/ndpr/ndpr.o \
                $(patsubst %.f90,%.o,$(shell find $(SRCPATH)/ham/libham -name "*.f90"))
 $(LIBPATH)/libham.$(LIBTYPE): $(PRESINC_OBJS) $(LIBHAM_OBJS)
 	if [ $(LIBTYPE) = a ]; then $(AR) -rcus $@ $^ ; else $(FC) -o $(LDFLAGS) $^ ; fi

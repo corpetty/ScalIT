@@ -3,7 +3,7 @@
 !ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 subroutine InitGA(level, sF, sN, nNodes, id, Nin, Nout, locData )
     implicit none
-    include '../../comm/mpidir.h'
+    include '../mpif.h'
     integer, intent(IN) :: level, sF, sN(sF), nNodes, id, Nin, Nout
     double precision, intent(OUT) :: locData(Nin, nout)
 
@@ -29,7 +29,7 @@ end
 !ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 subroutine getGA(level, sF, sN, nNodes, id, N1, locData, N, gaData )
     implicit none
-    include '../../comm/mpidir.h'
+    include '../mpif.h'
     integer, intent(IN) :: level, sF, sN(sF), nNodes, id,N1, N
     double precision, intent(IN)  :: locData(N1)
     double precision, intent(OUT) :: gaData(N)
@@ -99,7 +99,7 @@ end
 !cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 subroutine directRS(sF,sN, nNodes, id, level1, N1, dat1, level2, N2, dat2)
    implicit none
-   include '../../comm/mpidir.h'
+   include '../mpif.h'
    integer, intent(IN) :: sF, sN(sF), nNodes, id
    integer, intent(IN) :: level1, level2, N1, N2
    double precision, intent(IN)  :: dat1(N1)
