@@ -79,7 +79,8 @@ ham_lib: presinc_module $(LIBPATH)/libham.$(LIBTYPE)
 PRESINC_OBJS := $(patsubst %.f90,%.o,$(wildcard $(SRCPATH)/ham/presinc/*.f90))
 presinc_module: $(PRESINC_OBJS)
 
-LIBHAM_OBJS := $(SRCPATH)/ham/libham/coeff/threejmod.o \
+LIBHAM_OBJS := $(SRCPATH)/ham/libham/coeff/gauntmod.o \  # odd behavior of find requires theres explicit calls
+               $(SRCPATH)/ham/libham/coeff/threejmod.o \
                $(SRCPATH)/ham/libham/coeff/threej.o \
                $(SRCPATH)/ham/libham/ndpr/ndpr.o \
                $(patsubst %.f90,%.o,$(shell find $(SRCPATH)/ham/libham -name "*.f90"))

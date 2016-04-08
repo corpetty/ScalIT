@@ -22,7 +22,7 @@ subroutine dataread(fn)
    DOUBLE PRECISION :: r1, r2, ve1
    DOUBLE PRECISION, parameter :: pi=3.141592653589793d0
    INTEGER, parameter :: nx=100, ny=100
-   character*14, INTENT(IN) :: fn
+   character*128, INTENT(IN) :: fn
 
    open(98,file=fn,status='old')
 !        open(66,file='check.txt')
