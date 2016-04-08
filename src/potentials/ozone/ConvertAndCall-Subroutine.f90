@@ -16,7 +16,6 @@ SUBROUTINE ConvertCallPES(lr, br, gm, vpot)
     DOUBLE PRECISION, INTENT(OUT) :: vpot
     DOUBLE PRECISION, PARAMETER :: Pi = 3.14159265D0
     DOUBLE PRECISION, PARAMETER :: au2cm = 219474.6359029923D0  !(NIST 12/11/2013)
-    DOUBLE PRECISION, PARAMETER :: WellDepth = 9275.12D0 ! Point of inaccuracy!!!!!  Try and find more accurate value
 
     cgm=COS(gm)
     r1=SQRT(0.25D0*lr*lr + br*br + lr*br*cgm) 
@@ -30,6 +29,6 @@ SUBROUTINE ConvertCallPES(lr, br, gm, vpot)
     CALL imls( coords, vpot, 1)
   
     ! IMSL subroutine returns in cm^-1, ScalIT needs atomic units for this system. 
-    vpot=(vpot - WellDepth)/au2cm
+    vpot=vpot/au2cm
 
 END SUBROUTINE ConvertCallPES
