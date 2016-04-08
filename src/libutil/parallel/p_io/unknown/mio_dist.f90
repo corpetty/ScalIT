@@ -32,7 +32,7 @@ end
 !cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 subroutine MScatterSeq( nNodes, id, N1, fname, N2, data1)
    implicit none
-   include '../comm/mpidir.h'
+   include 'mpif.h'
    integer, intent(IN)  :: nNodes, id, N1, N2
    character(len=*), intent(IN)  :: fname
    double precision, intent(OUT) :: data1(N2)
@@ -74,7 +74,7 @@ end
 !cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 subroutine MScatterSeq_CX( nNodes, id, N1, fname, N2, data1)
    implicit none
-   include '../comm/mpidir.h'
+   include 'mpif.h'
    integer, intent(IN)  :: nNodes, id, N1, N2
    character(len=*), intent(IN)  :: fname
    double complex, intent(OUT) :: data1(N2)
@@ -116,7 +116,7 @@ end
 !cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 subroutine MScatterGrid( nNodes, id, N1, fname, N2, N3, data1)
    implicit none
-   include '../comm/mpidir.h'
+   include 'mpif.h'
    integer, intent(IN)  :: nNodes, id, N1, N2, N3
    character(len=*), intent(IN)  :: fname
    double precision, intent(OUT) :: data1(N2, N3)
@@ -163,7 +163,7 @@ end
 !cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 subroutine MScatterGrid_CX( nNodes, id, N1, fname, N2, N3, data1)
    implicit none
-   include '../comm/mpidir.h'
+   include 'mpif.h'
    integer, intent(IN)  :: nNodes, id, N1, N2, N3
    character(len=*), intent(IN)  :: fname
    double complex, intent(OUT) :: data1(N2, N3)
@@ -211,7 +211,7 @@ end
 !cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 subroutine MGatherSeq( nNodes, id, N1, fname, N2, data1)
    implicit none
-   include '../comm/mpidir.h'
+   include 'mpif.h'
    integer, intent(IN)  :: nNodes, id, N1, N2
    character(len=*), intent(IN) :: fname
    double precision, intent(IN) :: data1(N2)
@@ -252,7 +252,7 @@ end
 !cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 subroutine MGatherSeq_CX( nNodes, id, N1, fname, N2, data1)
    implicit none
-   include '../comm/mpidir.h'
+   include 'mpif.h'
    integer, intent(IN)  :: nNodes, id, N1, N2
    character(len=*), intent(IN)  :: fname
    double complex, intent(IN) :: data1(N2)
@@ -294,7 +294,7 @@ end
 !cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 subroutine MGatherGrid( nNodes, id, N1, fname, N2, N3, data1)
    implicit none
-   include '../comm/mpidir.h'
+   include 'mpif.h'
    integer, intent(IN)  :: nNodes, id, N1, N2, N3
    character(len=*), intent(IN)  :: fname
    double precision, intent(OUT) :: data1(N2, N3)
@@ -341,7 +341,7 @@ end
 !cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 subroutine MGatherGrid_CX( nNodes, id, N1, fname, N2, N3, data1)
    implicit none
-   include '../comm/mpidir.h'
+   include 'mpif.h'
    integer, intent(IN)  :: nNodes, id, N1, N2, N3
    character(len=*), intent(IN)  :: fname
    double complex, intent(OUT) :: data1(N2, N3)

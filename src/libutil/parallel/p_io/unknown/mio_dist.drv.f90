@@ -1,7 +1,7 @@
 program test_Mfile
 
    implicit none
-   include "../comm/mpidir.h"
+   include "mpif.h"
    character(LEN=*),parameter  :: fileName = '/home/wchen/tmp/tmp_dist.dat'
    integer, parameter :: NIN = 6, NOUT=4
    integer :: N

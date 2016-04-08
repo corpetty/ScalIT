@@ -4,7 +4,7 @@
 !ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 subroutine PSaveDataSeqAll(myID,rootID,nNodes,locDim,comm,filename,N,data1,ierr)
     implicit none
-    include '../comm/mpidir.h'
+    include 'mpif.h'
     character(len=*), intent(IN) :: filename
     integer, intent(IN)  :: myID,rootID,nNodes
     integer, intent(IN)  :: locDim(nNodes), comm, N
@@ -56,7 +56,7 @@ end
 !ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 subroutine PSaveDataSeqAll_CX(myID,rootID,nNodes,locDim,comm,filename,N,data1,ierr)
     implicit none
-    include '../comm/mpidir.h'
+    include 'mpif.h'
     character(len=*), intent(IN) :: filename
     integer, intent(IN)  :: myID,rootID,nNodes
     integer, intent(IN)  :: locDim(nNodes), comm, N
@@ -107,7 +107,7 @@ end
 !ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 subroutine PLoadDataSeqAll(myID,rootID,nNodes,locDim,comm,filename,N,data1,ierr)
     implicit none
-    include '../comm/mpidir.h'
+    include 'mpif.h'
     character(len=*), intent(IN) :: filename
     integer, intent(IN)  :: myID,rootID,nNodes
     integer, intent(IN)  :: locDim(nNodes), comm, N
@@ -160,7 +160,7 @@ end
 !ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 subroutine PLoadDataSeqAll_CX(myID,rootID,nNodes,locDim,comm,filename,N,data1,ierr)
     implicit none
-    include '../comm/mpidir.h'
+    include 'mpif.h'
     character(len=*), intent(IN) :: filename
     integer, intent(IN)  :: myID,rootID,nNodes
     integer, intent(IN)  :: locDim(nNodes), comm, N
