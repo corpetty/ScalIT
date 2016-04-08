@@ -1,12 +1,6 @@
 !ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 logical function initMOSBW()
-    if(id==rootID) then
-        print *, "    Made it to initMOSBW(), entering into preInitMOSBW() -CP"
-    end if
     initMOSBW = preInitMOSBW()
-    if(id==rootID) then
-        print *, "    Made it through preInit, entering into postInitMOSBW() -CP"
-    end if
 
 
     if (initMOSBW) initMOSBW = postInitMOSBW()
@@ -32,14 +26,7 @@ end subroutine
 logical function preInitMOSBW()
 
    integer :: i
-   if (id==rootID) then
-       print *, "        Entering adjustWinSize() -CP"
-   end if
    call adjustWinSize(sOSBW%mCnt, sOSBW%mE0, sOSBW%mDE)
-
-   if (id==rootID) then
-       print *, "        Entering getWGlobalSize() -CP"
-   end if
 
    call getWGlobalSize(sOSBW%mE0, sOSBW%mDE, phwLen, hwLen)
 
@@ -48,10 +35,6 @@ logical function preInitMOSBW()
    if (hwlen==0) then
       sPC = sPC - 2;  return      ! use OSBD
    else
-      if (id==rootID) then
-          print *, "        allocating with allocHW() -CP"
-      end if
-
       preInitMOSBW = allocHW()
    end if
 
@@ -63,21 +46,12 @@ logical function preInitMOSBW()
            call getWGlobalIndex(sOSBW%mE0,sOSBW%mDE,phwLen,hwLen,gCnt,  &
                           sCnt,pInd,gInd,nodInd)
        else
-           if (id==rootID) then
-               print *, "    Entering getWGlobalIndex with phwLen = 1 -CP"  
-           end if
            call getWGlobalIndex(sOSBW%mE0,sOSBW%mDE, 1,   hwLen,gCnt,   &
                           sCnt,pInd,gInd,nodInd)
        end if
 
-       if (id==rootID) then
-           print *, "    Entering into CalGlobalIndex() -CP"
-       end if
        call calGlobalIndex(hwLen, gInd, gKIndex, gPIndex)
 
-       if (id==rootID) then
-           print *, "    Entering into getWinVector() -CP"  
-       end if
        call getWinVector(Eig0, gEig0)
 
        if (sAP) then
