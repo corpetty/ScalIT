@@ -58,7 +58,7 @@ if(initflag==1) then
    OPEN (UNIT=652, FILE=file2,&
          FORM='UNFORMATTED', ACCESS='SEQUENTIAL')
    read(652) count3
-   write(*,*) 'data points',count3/2
+   ! write(*,*) 'data points',count3/2
    current_geom=0d0
    allocate(stored_weights(count3),stored_weights_ind(count3))
    read(652) order_1
