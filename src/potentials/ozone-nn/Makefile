@@ -67,7 +67,7 @@ $(BINPATH)/$(MOL)/p$(MOL)_o: $(POT_OBJS)
 	$(MPIFC)  -o $@ $(O_OBJS) $(PMOD_OBJS) $(MOSB_LIBS) $(LDFLAGS)
 	
 $(BINPATH)/$(MOL)/$(MOL)pot: $(POT_OBJS)
-	$(FC)  -o $@ $(E_OBJS) $(SRCPATH)/drivers/$(MOD)/pot.drv.o $(OSB_LIBS) $(LDFLAGS)
+	$(FC)  -o $@ $(E_OBJS) $(SRCPATH)/ham/$(MOD)/prog/pot.drv.o $(OSB_LIBS) $(LDFLAGS)
 	
 $(BINPATH)/$(MOL)/$(MOL)fit: $(POT_OBJS)
-	$(FC)  -o $@ $(E_OBJS) $(SRCPATH)/drivers/$(MOD)/fitv.drv.o $(OSB_LIBS) $(LDFLAGS)
+	$(FC)  -o $@ $(E_OBJS) $(SRCPATH)/ham/$(MOD)/prog/fitv.drv.o $(OSB_LIBS) $(LDFLAGS)
