@@ -3,7 +3,7 @@ MOD := ja3
 
 include $(PREFIX)/Makefile.setup
 
-POT_OBJS := RNvar.o $(patsubst %.f90,%.o,$(wildcard *.f90)) $(patsubst %.f,%.o,$(wildcard *.f))
+POT_OBJS := RNvar.o RNfunc.o pot_ozone-nn.o
 
 OSB_LIBS  := $(LIBPATH)/libham.$(LIBTYPE) $(LIBPATH)/libutil.a 
 MOSB_LIBS := $(LIBPATH)/libham.$(LIBTYPE) $(LIBPATH)/libutil.a $(LIBPATH)/libutilmpi.a 
