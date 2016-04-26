@@ -5,19 +5,19 @@ include $(PREFIX)/Makefile.setup
 
 POT_OBJS := RNvar.o $(patsubst %.f90,%.o,$(wildcard *.f90)) $(patsubst %.f,%.o,$(wildcard *.f))
 
-OSB_LIBS  := $(LIBPATH)/libdosb.a $(LIBPATH)/libosb.a 
-MOSB_LIBS := $(LIBPATH)/libdosb.a $(LIBPATH)/libosb.a $(LIBPATH)/libmosb.a 
+OSB_LIBS  := $(LIBPATH)/libham.$(LIBTYPE) $(LIBPATH)/libutil.a 
+MOSB_LIBS := $(LIBPATH)/libham.$(LIBTYPE) $(LIBPATH)/libutil.a $(LIBPATH)/libutilmpi.a 
 
-MOD_OBJS  := $(SRCPATH)/hamiltonians/$(MOD).o  $(SRCPATH)/drivers/$(MOD)/$(MOD).drv.o
-PMOD_OBJS := $(SRCPATH)/hamiltonians/p$(MOD).o $(SRCPATH)/drivers/$(MOD)/p$(MOD).drv.o
-MMOD_OBJS := $(SRCPATH)/hamiltonians/m$(MOD).o $(SRCPATH)/drivers/$(MOD)/m$(MOD).drv.o
+MOD_OBJS  := $(SRCPATH)/ham/$(MOD)/module/$(MOD).o  $(SRCPATH)/ham/$(MOD)/prog/$(MOD).drv.o
+PMOD_OBJS := $(SRCPATH)/ham/$(MOD)/module/p$(MOD).o $(SRCPATH)/ham/$(MOD)/prog/p$(MOD).drv.o
+MMOD_OBJS := $(SRCPATH)/ham/$(MOD)/module/m$(MOD).o $(SRCPATH)/ham/$(MOD)/prog/m$(MOD).drv.o
 
-E_OBJS := $(POT_OBJS) $(SRCPATH)/index/index_AB2e.o  
-O_OBJS := $(POT_OBJS) $(SRCPATH)/index/index_AB2o.o  
-A_OBJS := $(POT_OBJS) $(SRCPATH)/index/index_ABC.o 
+E_OBJS := $(POT_OBJS) $(SRCPATH)/ham/$(MOD)/index/index_AB2e.o  
+O_OBJS := $(POT_OBJS) $(SRCPATH)/ham/$(MOD)/index/index_AB2o.o  
+A_OBJS := $(POT_OBJS) $(SRCPATH)/ham/$(MOD)/index/index_ABC.o 
 
-PSO_VLR := $(SRCPATH)/drivers/$(MOD)/psolr.drv.o
-PSO_VBR := $(SRCPATH)/drivers/$(MOD)/psoBr.drv.o
+PSO_VLR := $(SRCPATH)/ham/$(MOD)/prog/psolr.drv.o
+PSO_VBR := $(SRCPATH)/ham/$(MOD)/prog/psoBr.drv.o
 
 
 .PHONY: all clean
