@@ -6,8 +6,8 @@ STATIC_BLAS := /usr/local/lib/libblas.a
 
 # program locations
 # Note that FC is almost vestigal, as the mpi wrappers are generally used for all
-#FC := gfortran 
-FC := ifort
+FC := gfortran 
+# FC := ifort
 #MPIFC := mpiifort
 MPIFC := mpif90
 AR := ar

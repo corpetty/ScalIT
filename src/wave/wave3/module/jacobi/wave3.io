@@ -68,7 +68,7 @@ subroutine saveWF()
       do i = 1, NR(1)
          do j = 1, NR(2)
             do k = 1, NR(3)
-               write(99,10)  myR1(i),myR2(j),myR3(k),p0(1:NState,i,j,k)
+               write(99,10)  myR1(i),myR2(j),myR3(k),p0(1:NState,i,j,k), p0(1:NState,i,j,k)**2
             end do
          end do
       end do

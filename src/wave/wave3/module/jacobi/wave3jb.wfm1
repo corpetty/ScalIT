@@ -49,7 +49,8 @@ subroutine calWFM1(m0)
 
             do ii =1, Nstate
                tmp = dotSum(NTotal,VP(1:Ntotal,ii),v2) 
-               P0(ii,I,J,K)=tmp **2
+               ! square taken away by praveen, we are plotting probability this way!
+               P0(ii,I,J,K)=tmp
             end do
 
             cnt = cnt + 1

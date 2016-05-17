@@ -38,7 +38,7 @@ subroutine calWFP2()
 
             do ii =1, Nstate
                tmp=dot_product(VP(1:Ntotal,ii),reshape(V2,(/Ntotal/))) 
-               P0(1:ii,I,J,K)=JBFactor*tmp**2
+               P0(1:ii,I,J,K)=JBFactor*tmp
             end do
 
             cnt = cnt + 1

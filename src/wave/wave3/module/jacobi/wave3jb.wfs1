@@ -52,7 +52,7 @@ subroutine calWFS1()
 
                do ii =1, Nstate
                   tmp = dotSum(NTotal,VP(1:Ntotal,ii),v2) 
-                  pwf(ii)=pwf(ii)+tmp**2
+                  pwf(ii)=pwf(ii)+tmp
                end do
 
              end do  ! end m0

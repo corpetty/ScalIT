@@ -37,7 +37,7 @@ subroutine calWFP1()
 
             do ii =1, Nstate
                tmp=dot_product(VP(1:Ntotal,ii),reshape(V2,(/Ntotal/))) 
-               P0(ii,I,J,K)=tmp**2
+               P0(ii,I,J,K)=tmp
             end do
 
             cnt = cnt + 1

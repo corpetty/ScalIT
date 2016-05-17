@@ -49,7 +49,7 @@ subroutine calWFM2(m0)
 
             do ii =1, Nstate
                tmp = dotSum(NTotal,VP(1:Ntotal,ii),v2) 
-               P0(ii,I,J,K)=JBFactor*tmp**2
+               P0(ii,I,J,K)=JBFactor*tmp
             end do
 
              cnt = cnt + 1
